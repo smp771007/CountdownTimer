@@ -38,6 +38,7 @@
             this.txtSecond = new System.Windows.Forms.TextBox();
             this.btnOnOff = new System.Windows.Forms.Button();
             this.lbRemainingTime = new System.Windows.Forms.Label();
+            this.cbDailyTask = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // barTime
@@ -101,7 +102,7 @@
             this.btnOnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOnOff.Location = new System.Drawing.Point(262, 44);
             this.btnOnOff.Name = "btnOnOff";
-            this.btnOnOff.Size = new System.Drawing.Size(130, 23);
+            this.btnOnOff.Size = new System.Drawing.Size(156, 23);
             this.btnOnOff.TabIndex = 7;
             this.btnOnOff.Text = "開始";
             this.btnOnOff.UseVisualStyleBackColor = false;
@@ -115,12 +116,23 @@
             this.lbRemainingTime.Size = new System.Drawing.Size(0, 12);
             this.lbRemainingTime.TabIndex = 8;
             // 
+            // cbDailyTask
+            // 
+            this.cbDailyTask.AutoSize = true;
+            this.cbDailyTask.Location = new System.Drawing.Point(403, 18);
+            this.cbDailyTask.Name = "cbDailyTask";
+            this.cbDailyTask.Size = new System.Drawing.Size(15, 14);
+            this.cbDailyTask.TabIndex = 9;
+            this.cbDailyTask.UseVisualStyleBackColor = true;
+            this.cbDailyTask.CheckedChanged += new System.EventHandler(this.cbDailyTask_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(404, 81);
+            this.ClientSize = new System.Drawing.Size(430, 81);
+            this.Controls.Add(this.cbDailyTask);
             this.Controls.Add(this.lbRemainingTime);
             this.Controls.Add(this.btnOnOff);
             this.Controls.Add(this.label3);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.TextBox txtSecond;
         private System.Windows.Forms.Button btnOnOff;
         private System.Windows.Forms.Label lbRemainingTime;
+        private System.Windows.Forms.CheckBox cbDailyTask;
     }
 }
 

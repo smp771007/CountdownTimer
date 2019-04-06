@@ -137,6 +137,20 @@ namespace CountdownTimer
             txtHour.Text = _setting.Hour;
             txtMinute.Text = _setting.Minute;
             txtSecond.Text = _setting.Second;
+
+            cbDailyTask.Checked = $"{DateTime.Now:yyyyMMdd}" == $"{_setting.CheckedDailyTask:yyyyMMdd}";
+        }
+
+        private void cbDailyTask_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbDailyTask.Checked)
+            {
+                _setting.CheckedDailyTask = DateTime.Now;
+            }
+            else
+            {
+                _setting.CheckedDailyTask = DateTime.MinValue;
+            }
         }
     }
 }
