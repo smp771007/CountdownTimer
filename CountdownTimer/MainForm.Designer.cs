@@ -39,6 +39,7 @@
             this.btnOnOff = new System.Windows.Forms.Button();
             this.lbRemainingTime = new System.Windows.Forms.Label();
             this.cbDailyTask = new System.Windows.Forms.CheckBox();
+            this.btnTotalTime = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // barTime
@@ -50,7 +51,7 @@
             // 
             // txtHour
             // 
-            this.txtHour.Location = new System.Drawing.Point(13, 47);
+            this.txtHour.Location = new System.Drawing.Point(91, 47);
             this.txtHour.Name = "txtHour";
             this.txtHour.Size = new System.Drawing.Size(45, 22);
             this.txtHour.TabIndex = 1;
@@ -58,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 57);
+            this.label1.Location = new System.Drawing.Point(142, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 2;
@@ -67,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 56);
+            this.label2.Location = new System.Drawing.Point(228, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 12);
             this.label2.TabIndex = 4;
@@ -75,7 +76,7 @@
             // 
             // txtMinute
             // 
-            this.txtMinute.Location = new System.Drawing.Point(99, 46);
+            this.txtMinute.Location = new System.Drawing.Point(177, 46);
             this.txtMinute.Name = "txtMinute";
             this.txtMinute.Size = new System.Drawing.Size(45, 22);
             this.txtMinute.TabIndex = 3;
@@ -83,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(224, 56);
+            this.label3.Location = new System.Drawing.Point(302, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 12);
             this.label3.TabIndex = 6;
@@ -91,7 +92,7 @@
             // 
             // txtSecond
             // 
-            this.txtSecond.Location = new System.Drawing.Point(173, 46);
+            this.txtSecond.Location = new System.Drawing.Point(251, 46);
             this.txtSecond.Name = "txtSecond";
             this.txtSecond.Size = new System.Drawing.Size(45, 22);
             this.txtSecond.TabIndex = 5;
@@ -100,9 +101,9 @@
             // 
             this.btnOnOff.BackColor = System.Drawing.Color.Lime;
             this.btnOnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOnOff.Location = new System.Drawing.Point(262, 44);
+            this.btnOnOff.Location = new System.Drawing.Point(331, 44);
             this.btnOnOff.Name = "btnOnOff";
-            this.btnOnOff.Size = new System.Drawing.Size(156, 23);
+            this.btnOnOff.Size = new System.Drawing.Size(87, 23);
             this.btnOnOff.TabIndex = 7;
             this.btnOnOff.Text = "開始";
             this.btnOnOff.UseVisualStyleBackColor = false;
@@ -113,8 +114,9 @@
             this.lbRemainingTime.AutoSize = true;
             this.lbRemainingTime.Location = new System.Drawing.Point(185, 18);
             this.lbRemainingTime.Name = "lbRemainingTime";
-            this.lbRemainingTime.Size = new System.Drawing.Size(0, 12);
+            this.lbRemainingTime.Size = new System.Drawing.Size(29, 12);
             this.lbRemainingTime.TabIndex = 8;
+            this.lbRemainingTime.Text = "時數";
             // 
             // cbDailyTask
             // 
@@ -126,12 +128,23 @@
             this.cbDailyTask.UseVisualStyleBackColor = true;
             this.cbDailyTask.CheckedChanged += new System.EventHandler(this.cbDailyTask_CheckedChanged);
             // 
+            // btnTotalTime
+            // 
+            this.btnTotalTime.Location = new System.Drawing.Point(12, 43);
+            this.btnTotalTime.Name = "btnTotalTime";
+            this.btnTotalTime.Size = new System.Drawing.Size(73, 27);
+            this.btnTotalTime.TabIndex = 10;
+            this.btnTotalTime.Text = "總時數";
+            this.btnTotalTime.UseVisualStyleBackColor = true;
+            this.btnTotalTime.Click += new System.EventHandler(this.btnTotalTime_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(430, 81);
+            this.Controls.Add(this.btnTotalTime);
             this.Controls.Add(this.cbDailyTask);
             this.Controls.Add(this.lbRemainingTime);
             this.Controls.Add(this.btnOnOff);
@@ -165,6 +178,7 @@
         private System.Windows.Forms.Button btnOnOff;
         private System.Windows.Forms.Label lbRemainingTime;
         private System.Windows.Forms.CheckBox cbDailyTask;
+        private System.Windows.Forms.Button btnTotalTime;
     }
 }
 

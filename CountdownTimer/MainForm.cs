@@ -14,11 +14,14 @@ namespace CountdownTimer
     {
         private Status _status = Status.Stop;
         private int _currentSec = 0;
+        private int _totalSec = 0;
         private Setting _setting = Setting.GetSetting();
 
         public MainForm()
         {
             InitializeComponent();
+
+            Reflash();
 
             Task.Run(async () =>
             {
@@ -29,6 +32,7 @@ namespace CountdownTimer
                         if (_currentSec > 0)
                         {
                             _currentSec--;
+                            _totalSec++;
                         }
                         else if (_currentSec == 0)
                         {
@@ -79,6 +83,9 @@ namespace CountdownTimer
 
             TimeSpan time = TimeSpan.FromSeconds(_currentSec);
             lbRemainingTime.Text = time.ToString(@"hh\:mm\:ss");
+
+            TimeSpan totalTime = TimeSpan.FromSeconds(_totalSec);
+            btnTotalTime.Text = $@"{totalTime:hh\:mm\:ss}";
         }
 
         private void btnOnOff_Click(object sender, EventArgs e)
@@ -151,6 +158,12 @@ namespace CountdownTimer
             {
                 _setting.CheckedDailyTask = DateTime.MinValue;
             }
+        }
+
+        private void btnTotalTime_Click(object sender, EventArgs e)
+        {
+            _totalSec = 0;
+            Reflash();
         }
     }
 }

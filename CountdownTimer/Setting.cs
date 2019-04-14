@@ -13,7 +13,7 @@ namespace CountdownTimer
     {
         private const string FILE_PATH = "Setting.txt";
 
-        public string Version { get { return "v1.0.1"; } }
+        public string Version { get { return "v1.0.2"; } }
         public AuthResizeFormTool.FormInfo FormTool { get; set; }
         public string Hour { get; set; }
         public string Minute { get; set; }
